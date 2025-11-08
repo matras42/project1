@@ -1,61 +1,271 @@
+/* Підключення шрифтів */
 @font-face {
     font-family: 'Damion';
     src: url('Damion.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
-
 @font-face {
-    font-family: 'Lato L';
+    font-family: 'LatoLight';
     src: url('Lato-Light.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
-
 @font-face {
-    font-family: 'Lato R';
+    font-family: 'LatoRegular';
     src: url('Lato-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
-
 @font-face {
-    font-family: 'Lato B';
+    font-family: 'LatoBold';
     src: url('Lato-Bold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
+/* Базові стилі */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 body {
-    background-color: #81a156;
+    font-family: 'Lato', sans-serif;
+    background-color : #81a256;
+    /* Основний зелений фон */
+    color: #3a4d30;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 0 0 10px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Хедер */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 40px;
 }
 
 .logo {
-    margin-top: -17px;
-    margin-left: 307px;
-    font-size: 41px;
-    font-family: 'Damion';
+    font-family: 'Damion', cursive;
+    font-size: 40px;
+    color: #ffffff;
 }
 
-h1 {
-    font-family: 'Lato L';
+.main-nav {
+    color: #ffffff;
 }
 
-.work-description {
-    font-family: 'Lato R';
-}
-
-nav {
-    z-index: 5;
-    position: absolute;
-
-}
-
-nav ul {
+.main-nav ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
-    width: 100%;
 }
 
+.main-nav li {
+    margin-left: 5px;
+}
+
+.main-nav a {
+    font-size: 15px;
+    font-weight: 700;
+    padding: 8px 17px;
+    border-radius: 0px; 
+}
+
+.main-nav a.active,
+.main-nav a:hover {
+    background-color: #b5ccaa;
+    /* Світліший зелений для активного стану */
+}
+
+/* Секція "Our Work" */
+.our-work {
+    font-family: 'LatoLight';
+    text-align: center;
+    padding: 75px 0;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.our-work h1 {
+    font-size: 45px;
+    font-weight: 300;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.our-work p {
+    letter-spacing: 0.1px;
+    word-spacing: -1.2px;
+    font-family: 'LatoRegular';
+    font-size: 12px;
+    width: 870px;
+    color: #e0e0e0;
+    /* Світло-сірий текст */
+    margin: 0 auto ;
+    line-height: 1.5;
+}
+
+/* Секція "Portfolio" */
+.portfolio {
+    font-family: 'latobold';
+    color: #e0e0e0;
+    width: 880px;
+}
+
+.portfolio-header {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #94b963;
+    margin-bottom: 40px;
+    margin-left: 15px;
+    margin-top: -2px;
+}
+
+.portfolio-header h2 {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.filter-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.filter-nav li {
+    padding-left: 17px;
+    margin-left: 10px;
+}
+
+.filter-nav a {
+    font-size: 13px;
+    font-weight: 700;
+    padding: 7px 10px;
+    border-radius: 4px;
+}
+
+/* Активний фільтр "Photography" */
+.filter-nav a.active {
+    background-color: #f0ad4e;
+    color: #ffffff;
+}
+
+.filter-nav a:not(.active):hover {
+    background-color: #99b48a;
+}
+
+/* Галерея */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.gallery-item {
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.image-container {
+    position: relative;
+}
+
+/* Ефект при наведенні (overlay) */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(136, 164, 117, 0.85);
+    /* Напівпрозорий зелений */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    
+}
+
+.plus-icon {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: lighter;
+}
+.plus-icon i {
+  font-size: 36px;
+  font-weight: lighter;
+
+}
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+.gallery-item:hover .plus-icon {
+    transform: scale(1);
+}
+
+.caption {
+    padding: 8px 10px;
+    text-align: center;
+    position: relative;
+}
+
+/* Трикутник */
+.caption::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    /* Знаходиться над блоком .caption */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 15px;
+    border-style: solid;
+    border-color: transparent transparent #ffffff transparent;
+    /* Схований за замовчуванням */
+    opacity: 0;
+
+}
+
+/* Показати трикутник при наведенні на .gallery-item */
+.gallery-item:hover .caption::before {
+    opacity: 1;
+}
+
+.caption-title {
+    font-family: 'latoregular';
+    font-size: 10px;
+    font-weight: 800;
+    color: #777777;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    word-spacing: 2px;
+}

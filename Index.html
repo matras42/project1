@@ -1,26 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>Acnostia - Our Work</title>
+    <!-- Підключення шрифту Lato з Google Fonts -->
+     <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <p class="logo">acrostia</p>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Work</a></li>
-            <li><a href="#">Contacts</a></li>
-        </ul>
-    </nav>
 
-    <main>
-        <h1>OUR WORK</h1>
-        <p class="work-description">Cras suscipit porttitor porttitor. Morbi sit amet tincidunt sapien. Curabitur posuere lectus aliquet erat rutrum sollicitudin. In enim diam, ullamcorper quis libero et, ultricies commodo est. Quisque at ante vitae justo fermentum viverra ac eu justo. Ut luctus imperdiet lacus, eget laoreet erat posuere quis.</p>
-    </main>
+    <div class="container">
+        <!-- Хедер сайту -->
+        <header class="main-header">
+            <div class="logo">acnostia</div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#" class="active">Work</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Секція "Our Work" -->
+            <section class="our-work">
+                <h1>Our Work</h1>
+                <p>Cras suscipit porttitor porttitor. Morbi sit amet tincidunt sapien. Curabitur posuere lectus aliquet erat rutrum sollicitudin. In ex eros, ullamcorper quis
+                libero et, ultricies commodo est. Quisque ut ante vitae justo fermentum viverra ac eu justo. Ut luctus imperdiet lacus, eget laoreet erat posuere quis.</p>
+            </section>
+
+            <!-- Секція "Portfolio" -->
+            <section class="portfolio">
+                <div class="portfolio-header">
+                    <h2>Portfolio</h2>
+                    <nav class="filter-nav">
+                        <ul>
+                            <li><a href="#">All</a></li>
+                            <li><a href="#" class="active">Photography</a></li>
+                            <li><a href="#">Logo design</a></li>
+                            <li><a href="#">Web design</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Галерея робіт -->
+                <div class="gallery">
+                    <!-- Елемент 1 -->
+                    <div class="gallery-item">
+                        <div class="image-container">
+                            <img src="1.png" alt="Portfolio item 1">
+                            <div class="overlay">
+                                <div class="plus-icon"><i class="fa-solid fa-plus"></i></div>
+                            </div>
+                        </div>
+                        <div class="caption">
+                            <span class="caption-title">Aenean A Elit</span>
+                        </div>
+                    </div>
+                    <!-- Елемент 2 -->
+                    <div class="gallery-item">
+                        <div class="image-container">
+                            <img src="2.png" alt="Portfolio item 2">
+                            <div class="overlay">
+                                <div class="plus-icon"><i class="fa-solid fa-plus"></i></div>
+                            </div>
+                        </div>
+                        <div class="caption">
+                            <span class="caption-title">Aliquam</span>
+                        </div>
+                    </div>
+                    <!-- Елемент 3 -->
+                    <div class="gallery-item">
+                        <div class="image-container">
+                            <img src="3.png" alt="Portfolio item 3">
+                            <div class="overlay">
+                                <div class="plus-icon"><i class="fa-solid fa-plus"></i></div>
+                            </div>
+                        </div>
+                        <div class="caption">
+                            <span class="caption-title">Suspendisse Libero</span>
+                        </div>
+                    </div>
+                    <!-- Елемент 4 -->
+                    <div class="gallery-item">
+                        <div class="image-container">
+                            <img src="4.png" alt="Portfolio item 4">
+                            <div class="overlay">
+                                <div class="plus-icon"><i class="fa-solid fa-plus"></i></div>
+                            </div>
+                        </div>
+                        <div class="caption">
+                            <span class="caption-title">Maecenas Fringilla</span>
+                        </div>
+                    </div>
+                    <!-- Елемент 5 -->
+                    <div class="gallery-item">
+                        <div class="image-container">
+                            <img src="5.png" alt="Portfolio item 5">
+                            <div class="overlay">
+                                <div class="plus-icon"><i class="fa-solid fa-plus"></i></div>
+                            </div>
+                        </div>
+                        <div class="caption">
+                            <span class="caption-title">Donec Vehicula</span>
+                        </div>
+                    </div>
+                    <!-- Елемент 6 -->
+                    <div class="gallery-item">
+                        <div class="image-container">
+                            <img src="6.png" alt="Portfolio item 6">
+                            <div class="overlay">
+                                <div class="plus-icon"><i class="fa-solid fa-plus"></i></div>
+                            </div>
+                        </div>
+                        <div class="caption">
+                            <span class="caption-title">Ut Et Sapien</span>
+                        </div>
+                    </div>
+                    <!-- Елемент 7 -->
+                    <div class="gallery-item">
+                        <div class="image-container">
+                            <img src="7.png" alt="Portfolio item 7">
+                            <div class="overlay">
+                                <div class="plus-icon"><i class="fa-solid fa-plus"></i></div>
+                            </div>
+                        </div>
+                        <div class="caption">
+                            <span class="caption-title">Quis Malesuada</span>   
+                        </div>
+                    </div>
+                    <!-- Елемент 8 -->
+                    <div class="gallery-item">
+                        <div class="image-container">
+                            <img src="8.png" alt="Portfolio item 8">
+                            <div class="overlay">
+                                 <div class="plus-icon"><i class="fa-solid fa-plus"></i></div>
+                            </div>
+                        </div>
+                        <div class="caption">
+                            <span class="caption-title">Vestibulum Antis</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
 </body>
 </html>
